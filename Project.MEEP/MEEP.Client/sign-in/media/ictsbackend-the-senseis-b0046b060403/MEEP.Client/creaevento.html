@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.112.5">
+  <title>MEEP</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/checkout/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="crea-evento/media/logo.png">
+  
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .select-btn {
+      display: flex;
+      height: 50px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .select-btn .btn-text {
+      font-size: 17px;
+      font-weight: 400;
+      color: #333;
+    }
+
+    .select-btn .arrow-dwn {
+      display: flex;
+      height: 21px;
+      width: 21px;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 50%;
+      background: #6e93f7;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .select-btn.open .arrow-dwn {
+      transform: rotate(-180deg);
+    }
+
+    .list-items {
+      position: relative;
+      margin-top: 15px;
+      border-radius: 8px;
+      padding: 16px;
+      background-color: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .select-btn.open~.list-items {
+      display: block;
+    }
+
+    .list-items .item {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      height: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 0 15px;
+      border-radius: 8px;
+    }
+
+    .list-items .item:hover {
+      background-color: #e7edfe;
+    }
+
+    .item .item-text {
+      font-size: 16px;
+      font-weight: 400;
+      color: #333;
+    }
+
+    .item .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 16px;
+      width: 16px;
+      border-radius: 4px;
+      margin-right: 12px;
+      border: 1.5px solid #c0c0c0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .item.checked .checkbox {
+      background-color: #4070f4;
+      border-color: #4070f4;
+    }
+
+    .checkbox .check-icon {
+      color: #fff;
+      font-size: 11px;
+      transform: scale(0);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .item.checked .check-icon {
+      transform: scale(1);
+    }
+
+    #error {
+      color: red;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="crea-evento/checkout.css" rel="stylesheet">
+</head>
+
+<body class="bg-body-tertiary">
+
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="crea-evento/MEEP.png" alt="" width="72" height="100">
+        <h2>Crea evento</h2>
+        <p class="lead">Benvenuti alla compilazione del form per l'organizzazione del vostro straordinario evento! È il
+          momento di dare vita alle vostre idee più audaci e trasformarle in una realtà indimenticabile</p>
+      </div>
+
+      <div class="row g-5">
+
+        <form class="needs-validation" id="myForm">
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label for="Title" class="form-label">Titolo</label>
+              <input type="text" class="form-control" id="Title" placeholder="" value="" required>
+            </div>
+
+            <label for="Tipologia" class="form-label" >Tipologia</label>
+            <div class="select-btn col-md-12">
+
+              <span class="btn-text">Seleziona la tipologia di evento(max 3 opzioni)</span>
+              <span class="arrow-dwn">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <input type="hidden"  ="hidden-input">
+            <ul class="list-items" >
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Serata cinema</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Serie TV</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Giochi di ruolo</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Videogiochi</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Pizza</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Karaoke</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Cena tematica</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Caccia al tesoro</span>
+              </li>
+              <li class="item">
+                <span class="checkbox">
+                  <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="item-text">Serata degustazione</span>
+              </li>
+            </ul>
+            <div id="error" style="display: none;">Devi selezionare almeno un'opzione</div>
+
+
+            <hr class="my-4">
+
+            <div class="col-md-4">
+              <label for="data-evento" class="form-label">Data:</label>
+              <input type="date" class="form-control" id="data-evento" placeholder="" value="" required
+                max="2030-12-31">
+            </div>
+
+            <div class="col-md-4">
+              <label for="ora-evento" class="form-label">Ora inizio:</label>
+              <input type="time" class="form-control" id="ora-inizio" placeholder="" value="" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="ora-evento" class="form-label">Ora fine: </label>
+              <input type="time" class="form-control" id="ora-fine" placeholder="" value="" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="ora-evento">Max partecipanti:</label>
+              <input type="number" class="form-control" id="maxPartecipanti" placeholder="" value="" required min="1"
+                max="15">
+            </div>
+
+            <div class="col-md-6">
+              <label for="ora-evento">Max accompagnatori:</label>
+              <input type="number" class="form-control" id="maxAccompagnatori" placeholder="" value="" required min="0"
+                max="5">
+            </div>
+
+            <hr class="my-4">
+
+            <div class="form-group col-md-12">
+              <label for="Descrizione">Descrizione(opzionale)</label>
+              <textarea class="form-control" id="descrizione" rows="3" maxlength="200"
+                style="max-height: 200px;">
+                </textarea>
+            </div>
+
+
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Carica un'immagine</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="image/*" required>
+              </div>
+            </form>
+
+            <hr class="my-4">
+
+            <button class="w-100 btn btn-primary btn-lg" onclick="creaevento()"  type="submit">Crea il tuo evento</button>
+        </form>
+
+      </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+      <p class="mb-1">&copy; 2017–2023 MEEP</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+  <script>
+    const selectBtn = document.querySelector(".select-btn"),
+      items = document.querySelectorAll(".item"),
+      form = document.querySelector("#myForm"),
+      error = document.querySelector("#error");
+
+    selectBtn.addEventListener("click", () => {
+      selectBtn.classList.toggle("open");
+    });
+
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        let checked = document.querySelectorAll(".checked");
+        if (checked.length < 3 || item.classList.contains("checked")) {
+          item.classList.toggle("checked");
+          checked = document.querySelectorAll(".checked");
+        }
+
+        let btnText = document.querySelector(".btn-text");
+
+        if (checked && checked.length > 0) {
+          btnText.innerText = `${checked.length} Selected`;
+        } else {
+          btnText.innerText = "Scegli la tipologia di evento";
+        }
+      });
+    });
+
+    form.addEventListener("submit", event => {
+      let checked = document.querySelectorAll(".checked");
+      if (checked.length === 0) {
+        event.preventDefault();
+        error.style.display = "block";
+      } else {
+        error.style.display = "none";
+      }
+    });
+
+  </script>
+  <script>
+    function creaevento() {
+      var titolo = document.getElementById("Title").value;
+      var data = document.getElementById("data-evento").value;
+      var oraInizio= document.getElementById("ora-inizio").value;
+      var oraFine= document.getElementById("ora-fine").value;
+      var maxPartecipanti= document.getElementById("maxPartecipanti").value;
+      var maxAccompagnatori= document.getElementById("maxAccompagnatori").value;
+      var descrizione= document.getElementById("descrizione").value;
+     
+      
+
+      var evento = {
+        titolo: titolo,
+        data: data,
+        oraInizio: oraInizio,
+        oraFine:oraFine,
+        maxPartecipanti:maxPartecipanti,
+        descrizione:descrizione,
+        maxAccompagnatori:maxAccompagnatori
+      };
+
+    
+
+      var token = localStorage.getItem("token");
+
+      fetch("http://localhost:8090/evento/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          Authorization: token,
+        },
+        body: JSON.stringify(evento),
+      })
+        .then((response) => {
+          if (response.ok) {
+            
+            window.location.href = "areariservata.html";
+          } else {
+            throw new Error(
+              "Errore nella richiesta. Stato: " + response.status
+            );
+          }
+        })
+        .catch((error) => {
+          console.error("Si è verificato un errore:", error);
+        });
+
+        
+    }
+  </script>
+
+</body>
+
+</html>

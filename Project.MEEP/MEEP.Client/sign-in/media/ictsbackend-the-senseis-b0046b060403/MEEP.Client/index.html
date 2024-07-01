@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Event Planning</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="index/img/logo.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="index/css/bootstrap-video-carousel.min.css" />
+  <link rel="stylesheet" href="index/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="index/assets/css/templatemo-plot-listing.css">
+  <link rel="stylesheet" href="index/assets/css/animated.css">
+  <link rel="stylesheet" href="index/assets/css/owl.css">
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <strong>MEEP</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+
+          <ul class="navbar-nav list-inline">
+            <!-- Icons -->
+            <li class="">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <input type="text" id="searchBox">
+              <button onclick="search()">Cerca</button>
+              <div id="searchResults"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+      </ol>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <video style="min-width: 100%; min-height: 100%" playsinline autoplay muted loop>
+            <source class="h-100" src="index/video/video1.mp4" type="video/mp4" />
+          </video>
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">Benvenuto a MEEP</h1>
+                <h5 class="mb-4">
+                  Organizza. Connetti. Vivi.
+                </h5>
+                <a class="btn btn-outline-light btn-lg m-2" href="creaevento.html"
+                  role="button" rel="nofollow" target="_blank">Crea evento</a>
+                <a class="btn btn-outline-light btn-lg m-2" href="filtraevento.html"
+                  target="_blank" role="button">CERCA EVENTO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <video style="min-width: 100%; min-height: 100%" playsinline autoplay muted loop>
+            <source class="h-100" src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+          </video>
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.3)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>Evento</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <video style="min-width: 100%; min-height: 100%" playsinline autoplay muted loop>
+            <source class="h-100" src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+          </video>
+          <div class="mask" style="
+                      background: linear-gradient(
+                      45deg,
+                      rgba(29, 236, 197, 0.7),
+                      rgba(91, 14, 214, 0.7) 100%
+                      );
+                      ">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>Evento </h2>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  <!--Main Navigation-->
+
+  <div class="popular-categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Le catgorie piu cercate</h2>
+            <h6>La tua avventura inizia con un click</h6>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-01.png" alt=""></span>
+                        Giochi di ruolo
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-02.png" alt=""></span>
+                         Serata pizza
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-03.png" alt=""></span>
+                        Serie TV
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-04.png" alt=""></span>
+                        Videogiochi
+                      </div>
+                    </div>
+                    <div class="last-thumb">
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-05.png" alt=""></span>
+                        Karaoke
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9 align-self-center">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Preparati a immergerti in mondi fantastici!</h4>
+                                <p> Dove la tua immaginazione prende vita. Unisciti a noi per una serata epica 
+                                  di giochi di ruolo, dove avrai l'opportunità di assumere il ruolo di eroi audaci, spie astute o maghi potenti. 
+                                  Sfida le tue abilità strategiche, crea legami con compagni di avventura e affronta pericolosi nemici in un ambiente
+                                   accogliente e coinvolgente. questa serata ti offrirà un'esperienza unica
+                                   Preparati a scoprire nuovi mondi, a vivere avventure 
+                                    epiche e a creare ricordi indimenticabili. 
+                                  Unisciti a noi per una serata di giochi di ruolo che ti trasporterà in un universo di meraviglia e avventura.".</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Scopri </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-01.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Benvenuti a una serata dedicata al paradiso della pizza!</h4>
+                                <p>Scegli tra una varietà di gustose pizze, dalle classiche alle più creative, e lasciati conquistare dai sapori autentici e dalla crosta croccante. Divertiti con i tuoi amici, condividendo fette di pizza calda e deliziosa, mentre ti godi l'atmosfera rilassante e conviviale. Che tu sia un appassionato di formaggio, un amante delle verdure o un fan della carne, t
+                                  roverai sicuramente la tua pizza preferita. Preparati per una serata di gusto e soddisfazione. </p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Esplora</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-02.jpg" alt="Foods on the table">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>La serata dedicata alle serie TV !</h4>
+                                <p>Preparati per una serata di intrighi, risate e emozioni senza fine! La serata dedicata alle serie TV è il luogo ideale 
+                                  per gli amanti del piccolo schermo. Abbiamo selezionato una varietà di serie televisive appassionanti, dalle commedie ai drammi, dagli action agli intrighi sovrannaturali. Siediti comodamente e lasciati avvolgere dalle trame avvincenti e dai personaggi indimenticabili che popolano queste storie. Condividi le risate,
+                                   le lacrime e le teorie con gli amici che hanno la tua stessa passione per le serie TV</p>
+                                <div class="main-white-button"><a href="listing.html"><i class="fa fa-eye"></i> Scopri</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-03.jpg" alt="cars in the city">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Entra nel mondo dell'intrattenimento virtuale!</h4>
+                                <p>Preparati per una serata di avventure epiche, competizioni emozionanti e divertimento senza limiti! La serata dedicata ai videogiochi 
+                                  ti offre l'opportunità di immergerti in universi digitali straordinari, dove potrai sfidare amici o giocatori provenienti da tutto il 
+                                  mondo. Scegli tra una vasta gamma di titoli, che spaziano dai giochi di azione e avventura alle sfide multigiocatore, 
+                                  dalle simulazioni sportive alle esperienze di realtà virtuale. Metti alla prova le tue abilità, affronta missioni epiche,
+                                   esplora mondi fantastici e scopri nuove strategie per raggiungere la vittoria. 
+                                  </p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Scopri</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-04.jpg" alt="Shopping Girl">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4> La serata karaoke</h4>
+                                <p>Preparati a diventare la star della serata e a dare il massimo sul palco! La serata karaoke ti offre l'opportunità di 
+                                  esprimere la tua voce e il tuo talento musicale in un'atmosfera divertente e coinvolgente. Scegli tra una vasta selezione di brani,
+                                   che spaziano dai grandi classici alle hit più recenti, e preparati a dare il massimo della tua performance.
+                                    Sia che tu sia un professionista della musica o un semplice appassionato del karaoke, 
+                                  questa serata è aperta a tutti coloro che amano cantare e divertirsi insieme
+                                </p>
+                                <div class="main-white-button"><a rel="nofollow"
+                                    href="https://templatemo.com/contact"><i class="fa fa-eye"></i>Esplora</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-05.jpg" alt="Traveling Beach">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="recent-listing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Eventi piu recenti</h2>
+            <h6>Semplice. Intuitivo. Eventi perfetti</h6>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-listing">
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-01.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>1. First Apartment Unit</h4>
+                      </a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(18) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $450 - $950 / month
+                        with taxes
+                      </span>
+                      <span class="details">Details: <em>2760 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 4 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="areariservata.html"><i class="fa fa-eye"></i>Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-02.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>2. Another House of Gaming</h4>
+                      </a>
+                      <h6>by: Top Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(24) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $1,400 - $3,500 /
+                        month with taxes
+                      </span>
+                      <span class="details">Details: <em>3650 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="profiloutente.html"><i class="fa fa-eye"></i>Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-03.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>3. Secret Place Hidden House</h4>
+                      </a>
+                      <h6>by: Best Property</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(36) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $1,500 - $3,600 /
+                        month with taxes
+                      </span>
+                      <span class="details">Details: <em>5500 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="areariservata.html"><i class="fa fa-eye"></i>Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-04.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>4. Sunshine Fourth Apartment</h4>
+                      </a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(24) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $3,600 / month with
+                        taxes
+                      </span>
+                      <span class="details">Details: <em>3660 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 5 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="profiloutente.html"><i class="fa fa-eye"></i>Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-05.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>5. Best House Of the Town</h4>
+                      </a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(32) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $5,600 / month with
+                        taxes
+                      </span>
+                      <span class="details">Details: <em>1750 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 6 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="areariservata.html"><i class="fa fa-eye"></i> Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-06.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>6. Amazing Pool Party Villa</h4>
+                      </a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(40) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $3,850 / month with
+                        taxes
+                      </span>
+                      <span class="details">Details: <em>3660 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="areariservata.html"><i class="fa fa-eye"></i>Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-05.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>7. Sunny Apartment</h4>
+                      </a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(24) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $5,450 / month with
+                        taxes
+                      </span>
+                      <span class="details">Details: <em>1640 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 8 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 5 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="areariservata.html"><i class="fa fa-eye"></i>Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-02.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>8. Third House of Gaming</h4>
+                      </a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(15) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="index/assets/images/listing-icon-01.png" alt=""></div> $5,520 / month with
+                        taxes
+                      </span>
+                      <span class="details">Details: <em>1660 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 5 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 4 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="areariservata.html"><i class="fa fa-eye"></i>Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="index/assets/images/listing-06.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#">
+                        <h4>9. Relaxing BBQ Party Villa</h4>
+                      </a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(20) Reviews</li>
+                      </ul>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760 / month with
+                        taxes
+                      </span>
+                      <span class="details">Details: <em>2880 sq ft</em></span>
+                      <ul class="info">
+                        <li><img src="index/assets/images/listing-icon-02.png" alt=""> 6 Bedrooms</li>
+                        <li><img src="index/assets/images/listing-icon-03.png" alt=""> 4 Bathrooms</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="areariservata.html"><i class="fa fa-eye"></i> Partecipa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  
+  <footer>
+
+    <div class="text-center py-4 align-items-center">
+      <p>Follow MEEP on social media</p>
+      <a href="https://www.its-ictpiemonte.it/" class="btn btn-primary m-1" role="button"
+        rel="nofollow" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.its-ictpiemonte.it/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.its-ictpiemonte.it/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.its-ictpiemonte.it/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MEEP</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+  <!-- End your project here-->
+
+
+  <!-- MDB -->
+  <script type="text/javascript" src="index/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+  <script src="index/vendor/jquery/jquery.min.js"></script>
+  <script src="index/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="index/assets/js/owl-carousel.js"></script>
+  <script src="index/assets/js/animation.js"></script>
+  <script src="index/assets/js/imagesloaded.js"></script>
+  <script src="index/assets/js/custom.js"></script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js"></script>
+  <script>
+    var searchTerm = "";
+
+    function search() {
+      var newSearchTerm = document.getElementById("searchBox").value;
+      var regex = new RegExp(newSearchTerm, "gi");
+
+      // Rimuovi l'evidenziazione delle parole ricercate precedentemente
+      removeHighlight();
+
+      // Cerca la parola nella pagina e sposta lo scroll
+      if (window.find && window.getSelection) {
+        document.designMode = "on";
+        var sel = window.getSelection();
+        sel.collapse(document.body, 0);
+
+        while (window.find(newSearchTerm)) {
+          document.execCommand("HiliteColor", false, "yellow");
+          sel.collapseToEnd();
+        }
+
+        document.designMode = "off";
+      }
+
+      searchTerm = newSearchTerm;
+    }
+
+    function removeHighlight() {
+      var highlightedElements = document.querySelectorAll("span[style='background-color: yellow;']");
+      for (var i = 0; i < highlightedElements.length; i++) {
+        var element = highlightedElements[i];
+        var parent = element.parentNode;
+        parent.replaceChild(document.createTextNode(element.textContent), element);
+      }
+    }
+  </script>
+</body>
+
+</html>

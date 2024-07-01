@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Event Planning</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="index/img/logo.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="index/css/bootstrap-video-carousel.min.css" />
+  <link rel="stylesheet" href="index/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="index/assets/css/templatemo-plot-listing.css">
+  <link rel="stylesheet" href="index/assets/css/animated.css">
+  <link rel="stylesheet" href="index/assets/css/owl.css">
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+
+      .eventimg{
+        max-width: 516px;
+        max-height: 392px;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" href="#">
+          <strong>MEEP</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+
+          <ul class="navbar-nav list-inline">
+            <!-- Icons -->
+            <li class="">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.its-ictpiemonte.it/" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <input type="text" id="searchBox">
+              <button onclick="search()">Cerca</button>
+              <div id="searchResults"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+      </ol>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <video style="min-width: 100%; min-height: 100%" playsinline autoplay muted loop>
+            <source class="h-100" src="media/video1.mp4" type="video/mp4" />
+          </video>
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">Benvenuto a MEEP</h1>
+                <h5 class="mb-4">
+                  Organizza. Connetti. Vivi.
+                </h5>
+                <a class="btn btn-outline-light btn-lg m-2" href="creaevento.html"
+                  role="button" rel="nofollow" >Crea evento</a>
+                <a class="btn btn-outline-light btn-lg m-2" href="filtraevento.html"
+                  role="button">CERCA EVENTO</a>
+                  <a class="btn btn-outline-light btn-lg m-2" href="areariservata.html"
+                  role="button" rel="nofollow" >Area riservata</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <video style="min-width: 100%; min-height: 100%" playsinline autoplay muted loop>
+            <source class="h-100" src="media/videogames.mp4" type="video/mp4" />
+          </video>
+          <div class="mask" style="background-color: rgba(80, 41, 41, 0.3)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>Videogiochi</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <video style="min-width: 100%; min-height: 100%" playsinline autoplay muted loop>
+            <source class="h-100" src="media/Cinema Animated Video Background Loop.mp4" type="video/mp4" />
+          </video>
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.3)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>Cinema </h2>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  <!--Main Navigation-->
+
+  <div class="popular-categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Le categorie piu cercate</h2>
+            <h6>La tua avventura inizia con un click</h6>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-01.png" alt=""></span>
+                        Giochi di ruolo
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-02.png" alt=""></span>
+                         Serata pizza
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-03.png" alt=""></span>
+                        Serie TV
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-04.png" alt=""></span>
+                        Videogiochi
+                      </div>
+                    </div>
+                    <div class="last-thumb">
+                      <div class="thumb">
+                        <span class="icon"><img src="index/assets/images/search-icon-05.png" alt=""></span>
+                        Karaoke
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9 align-self-center">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Preparati a immergerti in mondi fantastici!</h4>
+                                <p> Dove la tua immaginazione prende vita. Unisciti a noi per una serata epica 
+                                  di giochi di ruolo, dove avrai l'opportunità di assumere il ruolo di eroi audaci, spie astute o maghi potenti. 
+                                  Sfida le tue abilità strategiche, crea legami con compagni di avventura e affronta pericolosi nemici in un ambiente
+                                   accogliente e coinvolgente. questa serata ti offrirà un'esperienza unica
+                                   Preparati a scoprire nuovi mondi, a vivere avventure 
+                                    epiche e a creare ricordi indimenticabili. 
+                                  Unisciti a noi per una serata di giochi di ruolo che ti trasporterà in un universo di meraviglia e avventura.".</p>
+                                <div class="main-white-button"><a href="filtraevento.html"><i class="fa fa-eye"></i> Scopri </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-01.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Benvenuti a una serata dedicata al paradiso della pizza!</h4>
+                                <p>Scegli tra una varietà di gustose pizze, dalle classiche alle più creative, e lasciati conquistare dai sapori autentici e dalla crosta croccante. Divertiti con i tuoi amici, condividendo fette di pizza calda e deliziosa, mentre ti godi l'atmosfera rilassante e conviviale. Che tu sia un appassionato di formaggio, un amante delle verdure o un fan della carne, t
+                                  roverai sicuramente la tua pizza preferita. Preparati per una serata di gusto e soddisfazione. </p>
+                                <div class="main-white-button"><a href="filtraevento.html"><i class="fa fa-eye"></i> Esplora</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-02.jpg" alt="Foods on the table">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>La serata dedicata alle serie TV !</h4>
+                                <p>Preparati per una serata di intrighi, risate e emozioni senza fine! La serata dedicata alle serie TV è il luogo ideale 
+                                  per gli amanti del piccolo schermo. Abbiamo selezionato una varietà di serie televisive appassionanti, dalle commedie ai drammi, dagli action agli intrighi sovrannaturali. Siediti comodamente e lasciati avvolgere dalle trame avvincenti e dai personaggi indimenticabili che popolano queste storie. Condividi le risate,
+                                   le lacrime e le teorie con gli amici che hanno la tua stessa passione per le serie TV</p>
+                                <div class="main-white-button"><a href="filtraevento.html"><i class="fa fa-eye"></i> Scopri</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-03.jpg" alt="cars in the city">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Entra nel mondo dell'intrattenimento virtuale!</h4>
+                                <p>Preparati per una serata di avventure epiche, competizioni emozionanti e divertimento senza limiti! La serata dedicata ai videogiochi 
+                                  ti offre l'opportunità di immergerti in universi digitali straordinari, dove potrai sfidare amici o giocatori provenienti da tutto il 
+                                  mondo. Scegli tra una vasta gamma di titoli, che spaziano dai giochi di azione e avventura alle sfide multigiocatore, 
+                                  dalle simulazioni sportive alle esperienze di realtà virtuale. Metti alla prova le tue abilità, affronta missioni epiche,
+                                   esplora mondi fantastici e scopri nuove strategie per raggiungere la vittoria. 
+                                  </p>
+                                <div class="main-white-button"><a href="filtraevento.html"><i class="fa fa-eye"></i> Scopri</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-04.jpg" alt="Shopping Girl">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4> La serata karaoke</h4>
+                                <p>Preparati a diventare la star della serata e a dare il massimo sul palco! La serata karaoke ti offre l'opportunità di 
+                                  esprimere la tua voce e il tuo talento musicale in un'atmosfera divertente e coinvolgente. Scegli tra una vasta selezione di brani,
+                                   che spaziano dai grandi classici alle hit più recenti, e preparati a dare il massimo della tua performance.
+                                    Sia che tu sia un professionista della musica o un semplice appassionato del karaoke, 
+                                  questa serata è aperta a tutti coloro che amano cantare e divertirsi insieme
+                                </p>
+                                <div class="main-white-button"><a rel="nofollow"
+                                    href="filtraevento.html"><i class="fa fa-eye"></i>Esplora</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="index/assets/images/tabs-image-05.jpg" alt="Traveling Beach">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="recent-listing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Eventi piu recenti</h2>
+            <h6>Semplice. Intuitivo. Eventi perfetti</h6>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-listing">
+            <div name="item1" class="item">
+            </div>
+            <div name="item2" class="item">
+            </div>
+            <div name="item3" class="item">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+
+
+ 
+
+  <div class="container-fluid my-5 col-md-12 mb-md-0 p-0">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white p-0" style="background-color: #b2b7c0">
+      <!-- Grid container -->
+      <div class="container p-4 ">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                MEEP
+              </h6>
+              <p>
+                L'app di eventi che non puoi perdere!"
+Scopri, partecipa e vivi i migliori eventi della tua città con un semplice tocco!
+
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none" />
+
+
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contatti</h6>
+              <p><i class="fas fa-home mr-3"></i> Torino, To, 10024 IT</p>
+              <p><i class="fas fa-envelope mr-3"></i> meep@info.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Seguici</h6>
+
+              <!-- Facebook -->
+              <a class="btn btn-primary btn-floating rounded-circle m-1" style="background-color: #3b5998;
+                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); border: none !important;" href=" #!"
+                role="button"><i class="fab fa-facebook-f"></i></a>
+
+              <!-- Twitter -->
+              <a class="btn btn-primary btn-floating rounded-circle m-1"
+                style="background-color: #55acee; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); border: none !important;"
+                href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+              <!-- Google -->
+              <a class="btn btn-primary btn-floating rounded-circle m-1"
+                style="background-color: #dd4b39; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); border: none !important;"
+                href="#!" role="button"><i class="fab fa-google"></i></a>
+
+              <!-- Instagram -->
+              <a class="btn btn-primary btn-floating rounded-circle m-1"
+                style="background-color: #ac2bac;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); border: none !important;"
+                href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+              <!-- Linkedin -->
+              <a class="btn btn-primary btn-floating rounded-circle m-1"
+                style="background-color: #0082ca;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); border: none !important;"
+                href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+              <!-- WhatsApp -->
+              <a class="btn btn-primary btn-floating rounded-circle m-1"
+                style="background-color: #25D366; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); border: none !important;"
+                href="#!" role="button"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); ">
+        <p style="transform: translateX(-35px);">© 2023 MEEP</p>
+      </div>
+
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  
+
+
+  <!-- MDB -->
+  <script type="text/javascript" src="index/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script src="index/js/indexscript.js"></script>
+  <script type="text/javascript"></script>
+  <script src="index/vendor/jquery/jquery.min.js"></script>
+  <script src="index/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="index/assets/js/owl-carousel.js"></script>
+  <script src="index/assets/js/animation.js"></script>
+  <script src="index/assets/js/imagesloaded.js"></script>
+  <script src="index/assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js"></script>
+  <script>
+    var searchTerm = "";
+
+    function search() {
+      var newSearchTerm = document.getElementById("searchBox").value;
+      var regex = new RegExp(newSearchTerm, "gi");
+
+      // Rimuovi l'evidenziazione delle parole ricercate precedentemente
+      removeHighlight();
+
+      // Cerca la parola nella pagina e sposta lo scroll
+      if (window.find && window.getSelection) {
+        document.designMode = "on";
+        var sel = window.getSelection();
+        sel.collapse(document.body, 0);
+
+        while (window.find(newSearchTerm)) {
+          document.execCommand("HiliteColor", false, "yellow");
+          sel.collapseToEnd();
+        }
+
+        document.designMode = "off";
+      }
+
+      searchTerm = newSearchTerm;
+    }
+
+    function removeHighlight() {
+      var highlightedElements = document.querySelectorAll("span[style='background-color: yellow;']");
+      for (var i = 0; i < highlightedElements.length; i++) {
+        var element = highlightedElements[i];
+        var parent = element.parentNode;
+        parent.replaceChild(document.createTextNode(element.textContent), element);
+      }
+    }
+  </script>
+    
+</body>
+
+</html>

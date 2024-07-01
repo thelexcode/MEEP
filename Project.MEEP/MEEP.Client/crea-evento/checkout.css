@@ -1,0 +1,20 @@
+.container {
+  max-width: 960px;
+}
+
+
+.items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.items li {
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.items input[type="checkbox"] {
+  margin-right: 10px;
+}
+
